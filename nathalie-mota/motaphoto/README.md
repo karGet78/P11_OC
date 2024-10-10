@@ -1,4 +1,4 @@
-##MotaPhoto - Site WordPress pour une photographe freelance##
+##MotaPhoto - Site WordPress pour une photographe freelance
 
 Description du projet
 
