@@ -1,10 +1,10 @@
-##MotaPhoto - Site WordPress pour une photographe freelance
+### MotaPhoto - Site WordPress pour une photographe freelance
 
-Description du projet
+# Description du projet
 
 MotaPhoto est un site WordPress conçu pour Nathalie Mota, une photographe professionnelle spécialisée dans l'événementiel. Ce site a pour objectif de présenter son portfolio, de partager des séries de photos avec ses clients, et de permettre l’achat de droits d’utilisation des images. Le site a été conçu pour être entièrement personnalisable grâce à l’utilisation de Custom Post Types et de champs personnalisés ACF, permettant à Nathalie de gérer ses photos et d’ajouter de nouveaux contenus via l’interface d’administration.
 
-Objectifs du projet
+# Objectifs du projet
 
 *	Créer un site WordPress sur mesure, basé sur des maquettes fournies par la cliente, respectant les principes de Responsive Design.
 *	Mettre en place des Custom Post Types et des champs personnalisés (ACF) pour structurer les données des photos et faciliter leur gestion.
@@ -17,7 +17,7 @@ Fonctionnalités principales
 *	Pages de projet : Chaque photo possède une page dédiée incluant des informations détaillées et une option de préremplissage automatique du champ référence pour la modale de contact.
 *	Green IT : Réduction de la taille des images et limitation des appels API pour une performance optimisée.
 
-Technologies utilisées
+# Technologies utilisées
 
 -	WordPress
 -	PHP
@@ -29,7 +29,7 @@ Technologies utilisées
 -	jQuery pour la gestion des interactions utilisateur
 -	GitHub pour la gestion de version et le déploiement du thème personnalisé
 
-Étapes de réalisation
+# Étapes de réalisation
 
 Étape 1 : Création du thème personnalisé
 
