@@ -1,0 +1,77 @@
+/*
+Theme Name: NathalieMota
+Theme URI: https://motaphoto.com
+Author: Ahmed KARBOU
+Author URI: https://motaphoto.com
+Description: Thème pour Nathalie Mota, photographe professionnelle dans l’événementiel.
+Version: 1.0
+Tags: Photographie, partage, impression, commande
+Text Domain: nathalie-mota
+*/
+
+/* ----------fonts---------------*/
+/* Poppins Font Family */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.woff2') format('woff2'),
+         url('../fonts/Poppins/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Bold.woff2') format('woff2'),
+         url('../fonts/Poppins/Poppins-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Italic.woff2') format('woff2'),
+         url('../fonts/Poppins/Poppins-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Light.woff2') format('woff2'),
+         url('../fonts/Poppins/Poppins-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Space Mono Font Family */
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/Space_Mono/SpaceMono-Regular.woff2') format('woff2'),
+         url('../fonts/Space_Mono/SpaceMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/Space_Mono/SpaceMono-Bold.woff2') format('woff2'),
+         url('../fonts/Space_Mono/SpaceMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/Space_Mono/SpaceMono-Italic.woff2') format('woff2'),
+         url('../fonts/Space_Mono/SpaceMono-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/Space_Mono/SpaceMono-Light.woff2') format('woff2'),
+         url('../fonts/Space_Mono/SpaceMono-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}

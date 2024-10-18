@@ -1,0 +1,389 @@
+@charset "UTF-8";
+.main-photo-container {
+  max-width: 1148px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Space Mono", monospace;
+  /* Conteneur principal de la photo */
+  /* Navigation entre les photos */
+}
+.main-photo-container .photo-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* Informations sur la photo */
+  /* Conteneur de l'image */
+}
+.main-photo-container .photo-content .photo-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+  /* Conteneur des informations */
+}
+.main-photo-container .photo-content .photo-info .info-content {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Titre de la photo */
+  /* Texte des informations de la photo */
+}
+.main-photo-container .photo-content .photo-info .info-content .photo-title {
+  font-family: "Space Mono", monospace;
+  font-size: 66px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.main-photo-container .photo-content .photo-info .info-content p {
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.73px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.main-photo-container .photo-content .photo-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 563px;
+  height: 844px;
+}
+.main-photo-container .photo-content .photo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.main-photo-container .photo-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  /* Section contact pour la photo */
+  /* Conteneur des photos miniatures et flèches */
+}
+.main-photo-container .photo-navigation .photo-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  gap: 20px;
+  /* Bouton de contact */
+}
+.main-photo-container .photo-navigation .photo-contact .contact-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: left;
+  flex: 1;
+}
+.main-photo-container .photo-navigation .photo-contact #contact-button {
+  width: 272px;
+  height: 50px;
+  padding: 8px 15px;
+  font-size: 16px;
+  background-color: #d8d8d8;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
+}
+.main-photo-container .photo-navigation .photo-contact #contact-button:hover {
+  background-color: #ccc;
+}
+.main-photo-container .photo-navigation .photo-arrows-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .miniature {
+  display: flex;
+  gap: 10px;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .miniature a {
+  display: block;
+  width: 81px;
+  height: 71px;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .miniature a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 81px;
+  position: relative;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .arrows .arrow {
+  width: 25px;
+  height: 5px;
+  cursor: pointer;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .arrows .arrow img {
+  width: 100%;
+  height: 100%;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .arrows .arrow-left {
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.main-photo-container .photo-navigation .photo-arrows-container .arrows .arrow-right {
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+
+/* Section des photos associées */
+.related-photos-section {
+  max-width: 1148px;
+  margin: 20px auto 80px auto;
+  padding: 20px;
+  /* Grille des photos associées */
+}
+.related-photos-section h3 {
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26.66px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.related-photos-section .related-photos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.related-photos-section .related-photos-grid .related-photo-item {
+  width: 564px;
+  height: 495px;
+}
+.related-photos-section .related-photos-grid .related-photo-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.related-photos-section .related-photos-grid .related-photo-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Media queries pour tablette */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-photo-container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .photo-content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+  .photo-image {
+    width: 50%;
+  }
+  .photo-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .photo-info {
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+  }
+  .photo-info .info-content {
+    max-width: 100%;
+    gap: 10px;
+  }
+  .photo-info .info-content .photo-title {
+    font-size: 30px !important;
+    text-align: left;
+  }
+  .photo-info .info-content p {
+    font-size: 14px;
+    line-height: 20.73px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .photo-navigation {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+  }
+  .photo-navigation .photo-contact .contact-text {
+    font-size: 12px !important;
+    text-align: center !important;
+    flex: 1;
+  }
+  .photo-navigation #contact-button {
+    width: 172px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+    transition: background-color 0.3s;
+  }
+  .related-photos-section {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .related-photos-section .related-photos-grid {
+    justify-content: center;
+    gap: 20px;
+  }
+  .related-photos-section .related-photos-grid .related-photo-item {
+    max-width: 48%;
+  }
+  .related-photos-section .related-photos-grid .related-photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .related-photos-section .related-photos-grid .related-photo-item img:hover {
+    transform: scale(1.05);
+  }
+}
+/* Media queries pour mobile */
+@media (max-width: 767px) {
+  .main-photo-container {
+    width: 100%;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+  .photo-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .photo-image {
+    width: 262px !important;
+    height: 397px !important;
+  }
+  .photo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .photo-info {
+    width: 262px !important;
+    align-items: center !important;
+    padding-bottom: 30px;
+    border-bottom: none !important;
+  }
+  .info-content {
+    font-size: 14px !important;
+  }
+  .info-content .photo-title {
+    font-size: 46px !important;
+  }
+  .mobile-divider {
+    width: 100%;
+    max-width: 375px;
+    height: 1px;
+    background-color: black;
+    margin: -20px 20px !important;
+  }
+  .photo-arrows-container {
+    display: none !important;
+  }
+  /* Section contact */
+  .photo-contact {
+    display: flex; /* Active flexbox */
+    flex-direction: column; /* Empile le texte et le bouton en colonne */
+    align-items: center; /* Centre horizontalement */
+    width: 100%; /* Utilise toute la largeur */
+    max-width: none; /* Supprime la limitation de largeur */
+    gap: 20px; /* Espacement entre le texte et le bouton */
+    padding: 20px 0; /* Ajoute du padding vertical */
+  }
+  .photo-contact .contact-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center; /* Centre le texte */
+    margin: 0; /* Supprime les marges */
+    white-space: nowrap !important; /* Empêche le texte de passer à la ligne */
+    transform: translateX(20px) !important; /* Déplace le texte de 10px vers la droite */
+  }
+  .photo-contact #contact-button {
+    width: auto; /* Adapte la largeur du bouton à son contenu */
+    max-width: 272px; /* Limite la largeur maximale du bouton */
+    padding: 12px 24px; /* Ajuste le padding pour un meilleur rendu */
+    font-size: 16px; /* Ajuste la taille du texte pour le mobile */
+    background-color: #d8d8d8;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 auto; /* Centre le bouton horizontalement */
+  }
+  .related-photos-section {
+    max-width: 375px !important;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .related-photos-section h3 {
+    text-align: center !important;
+  }
+  .related-photos-section .related-photos-grid {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 20px;
+  }
+  .related-photos-section .related-photos-grid .related-photo-item {
+    max-width: 317.66px !important;
+    height: 278.8px !important;
+  }
+  .related-photos-section .related-photos-grid .related-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .related-photos-section .related-photos-grid .related-photo-item img:hover {
+    transform: scale(1.05);
+  }
+}
+
+/*# sourceMappingURL=single_photo.css.map */

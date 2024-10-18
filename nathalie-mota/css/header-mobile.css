@@ -1,0 +1,197 @@
+@charset "UTF-8";
+header {
+  background-color: #ffffff;
+}
+header .nav-container {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1000;
+}
+header .nav-container .logo {
+  width: 216px;
+  height: 14px;
+  margin-left: 146px;
+}
+header .nav-container .logo img {
+  width: 100%;
+  height: auto;
+}
+header .nav-container .menu-burger {
+  display: none;
+}
+header .navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .navigation .navigation--menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 146px 0 0;
+}
+header .navigation .navigation--menu li a {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+header .navigation .navigation--menu li a:hover {
+  font-weight: 700;
+}
+
+.navigation-modal {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .nav-container {
+    max-width: 768px;
+    height: 72px;
+  }
+  header .nav-container .logo {
+    width: 150px;
+  }
+  header .navigation--menu {
+    margin: 0 100px 0 0;
+  }
+}
+@media (max-width: 768px) {
+  header .nav-container {
+    max-width: 375px;
+    height: 72px;
+  }
+  header .nav-container .logo {
+    width: 138px;
+    margin-left: 0;
+  }
+  header .nav-container .menu-burger {
+    display: block; /* Pour être visible en mobile */
+    width: 27.42px;
+    height: 18.85px;
+    cursor: pointer;
+    position: absolute;
+    top: 27px;
+    left: 307px;
+    z-index: 1001;
+  }
+  header .nav-container .menu-burger .bar {
+    display: block;
+    background-color: #000 !important;
+    width: 100%;
+    height: 3px !important;
+    margin: 5px 0;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+  }
+  header .nav-container .menu-burger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  header .nav-container .menu-burger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  header .nav-container .menu-burger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  header .navigation {
+    display: none;
+  }
+  .navigation-modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #e00000;
+    z-index: 1002;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+  .navigation-modal.open {
+    transform: translateX(0);
+  }
+  .navigation-modal .modal-top {
+    width: 100%;
+    height: 72px;
+    padding: 0 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation-modal .modal-top .logo {
+    width: 138px;
+    height: 9px;
+  }
+  .navigation-modal .modal-top .logo img {
+    width: 100%;
+    height: auto;
+  }
+  .navigation-modal .modal-top .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 30px;
+    cursor: pointer;
+    position: relative; /* Nécessaire pour que `transform` fonctionne */
+    transform: translateX(-100px); /* Déplace la croix vers la gauche */
+  }
+  .navigation-modal .modal-top .close .bar {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #000;
+  }
+  .navigation-modal .modal-top .close .bar:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .navigation-modal .modal-top .close .bar:nth-child(2) {
+    display: none;
+  }
+  .navigation-modal .modal-top .close .bar:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .navigation-modal .modal-bottom {
+    width: 100%;
+    height: calc(100% - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation-modal .modal-bottom .navigation--menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .navigation-modal .modal-bottom .navigation--menu li {
+    margin: 0;
+  }
+  .navigation-modal .modal-bottom .navigation--menu li a {
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .navigation-modal .modal-bottom .navigation--menu li a:hover {
+    font-weight: bold;
+  }
+}
+
+/*# sourceMappingURL=header-mobile.css.map */

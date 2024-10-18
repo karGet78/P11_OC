@@ -1,0 +1,162 @@
+// Styles pour la version Mobile uniquement
+@import 'header';
+@media (max-width: 768px) {
+  header {
+    .nav-container {
+      max-width: 375px;
+      height: 72px;
+
+      .logo {
+        width: 138px;
+        margin-left: 0;
+      }
+
+      // Affichage du menu burger sur mobile
+      .menu-burger {
+       display: block; /* Pour être visible en mobile */
+       width: 27.42px;
+       height: 18.85px;
+       cursor: pointer;
+       position: absolute;
+       top: 27px;
+       left: 307px;
+       z-index: 1001;
+
+        .bar {
+          display: block;
+          background-color: #000 !important; 
+          width: 100%; 
+          height: 3px !important; 
+          margin: 5px 0; 
+          transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+        }
+
+        &.open {
+          .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+
+          .bar:nth-child(2) {
+            opacity: 0;
+          }
+
+          .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+          }
+        }
+      }
+    }
+
+    // Cache la navigation classique sur mobile
+    .navigation {
+      display: none;
+    }
+  }
+
+ // Modale de navigation pour mobile
+.navigation-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #e00000;
+  z-index: 1002;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+
+  // Ouvre la modale
+  &.open {
+    transform: translateX(0);
+  }
+
+
+    // Partie supérieure de la modale (avec logo et bouton fermer)
+    .modal-top {
+      width: 100%;
+      height: 72px;
+      padding: 0 20px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        width: 138px;
+        height: 9px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px; 
+        height: 30px;
+        cursor: pointer;
+        position: relative; /* Nécessaire pour que `transform` fonctionne */
+        transform: translateX(-100px); /* Déplace la croix vers la gauche */
+
+        .bar {
+          position: absolute;
+          width: 22px;
+          height: 2px ;
+          background-color: #000;
+        }
+
+        .bar:nth-child(1) {
+          transform: rotate(45deg);
+        }
+
+        .bar:nth-child(2) {
+          display: none;
+        }
+
+        .bar:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    // Partie inférieure de la modale (avec le menu de navigation)
+    .modal-bottom {
+      width: 100%;
+      height: calc(100% - 72px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .navigation--menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        li {
+          margin: 0;
+
+          a {
+            font-family: "Space Mono", monospace;
+            font-size: 24px;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+
+            &:hover {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

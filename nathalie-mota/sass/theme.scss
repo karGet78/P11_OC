@@ -1,0 +1,218 @@
+// Styles généraux
+body {
+  font-family: "Space Mono", monospace;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+// Section Hero
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100px;
+
+  .photo-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h2 {
+      position: absolute;
+      width: 1000px;
+      height: 142px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // Centrage horizontal et vertical
+      font-size: 96px;
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 142.18px;
+      -webkit-text-stroke: 3px white;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+// Footer
+footer {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 0 8px;
+  border-top: 1px solid #000000;
+
+  .footer-nav {
+    width: 620px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          font-family: "Space Mono", monospace;
+          font-size: 16px;
+          font-weight: 400;
+          color: #000000;
+          text-decoration: none;
+          padding: 5px 10px;
+          text-transform: uppercase;
+          transition: font-weight 0.3s;
+
+          &:hover {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media queries pour les tablettes (768px - 1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Section Hero pour les tablettes
+  .hero {
+    max-width: 768px;
+    height: 400px;
+    margin-bottom: 40px;
+
+    .photo-hero {
+      img {
+        object-fit: cover;
+      }
+
+      h2 {
+        font-size: 48px;
+        line-height: 60px;
+      }
+    }
+  }
+
+  // Footer pour les tablettes
+  footer {
+    flex-direction: row;
+    height: 100px;
+    padding: 20px 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .footer-nav {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .footer-menu {
+      flex-direction: row;
+
+      li {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+// Media queries pour les mobiles (max-width: 767px)
+@media (max-width: 767px) {
+  // Section Hero pour les mobiles
+  .hero {
+    max-width: 375px;
+    height: 253px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .photo-hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h2 {
+        position: absolute;
+        font-size: 36px;
+        line-height: 50px;
+        font-weight: 700;
+        font-style: italic;
+        text-transform: uppercase;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-text-stroke: 1px white;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  // Footer pour les mobiles
+  footer {
+    flex-direction: column;
+    height: 207px;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+
+    .footer-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-menu {
+      flex-direction: column;
+      gap: 20px;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@import 'header';
+@import 'header-mobile';

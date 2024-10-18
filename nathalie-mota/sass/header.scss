@@ -1,0 +1,90 @@
+// Styles principaux pour le header - Desktop et Tablette
+header {
+    background-color: #ffffff;
+  
+    // Conteneur principal de la navigation
+    .nav-container {
+      width: 100%;
+      height: 80px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1000;
+  
+      // Logo du site
+      .logo {
+        width: 216px;
+        height: 14px;
+        margin-left: 146px;
+  
+        img {
+          width: 100%;
+          height: auto; // Maintient les proportions de l'image
+        }
+      }
+  
+      // Menu burger pour la navigation mobile (caché par défaut)
+      .menu-burger {
+        display: none; // Caché sur Desktop et Tablette
+      }
+    }
+  
+    // Navigation principale
+    .navigation {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  
+      // Liste des éléments du menu
+      .navigation--menu {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0 146px 0 0;
+  
+        li {
+          a {
+            font-family: "Space Mono", monospace;
+            font-size: 16px;
+            font-weight: 400;
+            color: #000;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 5px 10px;
+  
+            &:hover {
+              font-weight: 700; // Effet hover pour rendre le texte gras
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Modale de navigation (n'est pas affichée sur Desktop)
+  .navigation-modal {
+    display: none;
+  }
+  
+  // Media Queries pour la version Tablette (768px à 1024px)
+  @media (min-width: 768px) and (max-width: 1024px) {
+    header {
+      .nav-container {
+        max-width: 768px;
+        height: 72px;
+  
+        .logo {
+          width: 150px;
+        }
+      }
+  
+      .navigation--menu {
+        margin: 0 100px 0 0;
+      }
+    }
+  }
+  
